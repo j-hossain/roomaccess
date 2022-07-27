@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "196212924573",
+    "project_id": "room-access-dbf98",
+    "storage_bucket": "room-access-dbf98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196212924573:android:a4b2e995dbce7ad547b474",
+        "android_client_info": {
+          "package_name": "com.example.roomaccess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196212924573-nnn7c7grqkf3uab2smarekuvrli2u13f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_-qiFJHcegWHl3nPPmttMTLO0yTCVypU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196212924573-nnn7c7grqkf3uab2smarekuvrli2u13f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
