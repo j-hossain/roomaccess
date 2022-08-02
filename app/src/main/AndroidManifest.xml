@@ -14,17 +14,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomAccess">
         <activity
+            android:name=".userRoomAccess"
+            android:exported="false" />
+        <activity
             android:name=".Starter"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".userRegister"
-            android:exported="false">
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".userLogin"
             android:exported="false" />
@@ -35,9 +38,8 @@
             android:name=".act_qrscanner"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:name=".Home"
+            android:exported="false"></activity>
     </application>
 
 </manifest>

@@ -55,7 +55,7 @@ public class act_qrscanner extends AppCompatActivity implements ZXingScannerView
     @Override
     public void handleResult(Result result) {
         String roomID = result.getText().toString();
-        Intent userAccess = new Intent(getApplicationContext(), useraccess.class);
+        Intent userAccess = new Intent(getApplicationContext(), userRoomAccess.class);
         userAccess.putExtra("roomID",roomID);
         startActivity(userAccess);
 //        db_ref.child("Rooms").child(roomID).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {

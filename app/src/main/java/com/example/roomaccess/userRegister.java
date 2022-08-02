@@ -73,6 +73,8 @@ public class userRegister extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(getApplicationContext(),"registration successfull",Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(userRegister.this, userLogin.class));
+                            finish();
                         }
                     }
                 });

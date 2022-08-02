@@ -67,7 +67,7 @@ public class userLogin extends AppCompatActivity {
                         }
                         else{
                             Toast.makeText(getApplicationContext(),"Login successfull...",Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(userLogin.this,MainActivity.class);
+                            Intent i = new Intent(userLogin.this, Home.class);
                             startActivity(i);
                             finish();
                         }
@@ -86,7 +86,7 @@ public class userLogin extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),user.getUid().toString(),Toast.LENGTH_LONG).show();
             // if the user is not null then we are
             // opening a main activity on below line.
-            Intent i = new Intent(userLogin.this, MainActivity.class);
+            Intent i = new Intent(userLogin.this, Home.class);
             startActivity(i);
             this.finish();
         }
