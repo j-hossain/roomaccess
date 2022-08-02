@@ -11,13 +11,15 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Home extends AppCompatActivity {
-    Button btn_qrscan, btn_logout;
+    Button btn_qrscan, btn_logout, btn_my_rooms;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         btn_qrscan = (Button) findViewById(R.id.btn_qrscan);
         btn_logout = (Button) findViewById(R.id.btn_logout);
+        btn_my_rooms = (Button) findViewById(R.id.btn_my_rooms);
+
         btn_qrscan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,6 +34,14 @@ public class Home extends AppCompatActivity {
                 Intent i = new Intent(Home.this,userLogin.class);
                 startActivity(i);
                 finish();
+            }
+        });
+
+        btn_my_rooms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Home.this,MyRooms.class);
+                startActivity(i);
             }
         });
     }
