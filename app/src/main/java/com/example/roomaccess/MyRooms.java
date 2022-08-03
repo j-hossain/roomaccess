@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 
 public class MyRooms extends AppCompatActivity {
 
-    ListView lv_rooms;
+    public ListView lv_rooms;
     ArrayList<model_my_room> rooms;
     roomViewAdapter adapter;
     FloatingActionButton btn_add_room;
@@ -59,6 +60,7 @@ public class MyRooms extends AppCompatActivity {
                                     @Override
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                                         model_room the_room = snapshot.getValue(model_room.class);
+                                        the_room.setRoomID(access_rooms.getKey().toString());
                                         rooms.add(new model_my_room(the_room,the_access));
                                         adapter.notifyDataSetChanged();
                                     }
@@ -88,5 +90,19 @@ public class MyRooms extends AppCompatActivity {
                 startActivity(create_room);
             }
         });
+
+        // setting what will happen when clicked on a room item
+        lv_rooms.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                gotoRoomView(rooms.get(position).getRoom());
+            }
+        });
+    }
+
+    public void gotoRoomView(model_room thisRoom){
+        Intent roomView = new Intent(this, roomInfoView.class);
+        roomView.putExtra("room",thisRoom);
+        startActivity(roomView);
     }
 }

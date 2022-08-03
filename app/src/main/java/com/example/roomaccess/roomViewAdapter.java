@@ -2,6 +2,7 @@ package com.example.roomaccess;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,6 @@ public class roomViewAdapter extends ArrayAdapter<model_my_room> {
             TextView tv_access_type = convertView.findViewById(R.id.list_tv_access_type);
             tv_room_name.setText(room_list.get(position).getRoom().getRoom_name());
             tv_access_type.setText(room_list.get(position).getAccess().getAccess_type());
-
         }
         return convertView;
     }

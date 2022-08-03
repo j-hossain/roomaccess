@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.roomaccess">
+    package="com.example.roomaccess" >
 
     <uses-permission android:name="android.permission.CAMERA" /> <!-- permissions for internet -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,7 +12,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RoomAccess">
+        android:theme="@style/Theme.RoomAccess" >
+        <activity
+            android:name=".roomInfoView"
+            android:exported="false" />
         <activity
             android:name=".act_createRoom"
             android:exported="false" />
@@ -24,7 +27,7 @@
             android:exported="false" />
         <activity
             android:name=".Starter"
-            android:exported="true">
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
