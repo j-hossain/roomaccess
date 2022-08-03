@@ -61,6 +61,7 @@ public class MyRooms extends AppCompatActivity {
                                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                                         model_room the_room = snapshot.getValue(model_room.class);
                                         the_room.setRoomID(access_rooms.getKey().toString());
+                                        the_access.setRoom(the_room);
                                         rooms.add(new model_my_room(the_room,the_access));
                                         adapter.notifyDataSetChanged();
                                     }
@@ -95,12 +96,12 @@ public class MyRooms extends AppCompatActivity {
         lv_rooms.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                gotoRoomView(rooms.get(position).getRoom());
+                gotoRoomView(rooms.get(position).getAccess());
             }
         });
     }
 
-    public void gotoRoomView(model_room thisRoom){
+    public void gotoRoomView(model_access thisRoom){
         Intent roomView = new Intent(this, roomInfoView.class);
         roomView.putExtra("room",thisRoom);
         startActivity(roomView);
