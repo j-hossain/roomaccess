@@ -63,7 +63,7 @@ public class userLogin extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(!task.isSuccessful()){
-                            Toast.makeText(getApplicationContext(),"Login unsucessfull...",Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"The Password or the email is not correct...",Toast.LENGTH_LONG).show();
                         }
                         else{
                             Toast.makeText(getApplicationContext(),"Login successfull...",Toast.LENGTH_LONG).show();
@@ -83,7 +83,6 @@ public class userLogin extends AppCompatActivity {
         // the user is already sign in.
         FirebaseUser user = fr_auth.getCurrentUser();
         if (user != null) {
-            Toast.makeText(getApplicationContext(),user.getUid().toString(),Toast.LENGTH_LONG).show();
             // if the user is not null then we are
             // opening a main activity on below line.
             Intent i = new Intent(userLogin.this, Home.class);

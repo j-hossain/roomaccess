@@ -18,7 +18,6 @@ public class Starter extends AppCompatActivity {
         FirebaseAuth fr_auth = FirebaseAuth.getInstance();
         FirebaseUser user = fr_auth.getCurrentUser();
         if (user != null) {
-            Toast.makeText(getApplicationContext(),user.getUid().toString(),Toast.LENGTH_LONG).show();
             // if the user is not null then we are
             // opening a main activity on below line.
             Intent i = new Intent(Starter.this, Home.class);

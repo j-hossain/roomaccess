@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".act_createRoom">
+
+    <TextView
+        android:id="@+id/tv_create_room_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create a Room"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        tools:layout_editor_absoluteX="133dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <EditText
+        android:id="@+id/ed_room_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_create_room_heading"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="75dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Room Name" />
+
+    <EditText
+        android:id="@+id/ed_room_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ed_room_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="40dp"
+        android:ems="20"
+        android:hint="Details"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btn_add_room"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ed_room_details"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:text="Add" />
+</RelativeLayout>
