@@ -10,6 +10,7 @@
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout-w936dp/activity_act_login.xml" value="0.1" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/activity_act_login.xml" value="0.1265625" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/activity_act_qrscanner.xml" value="0.275" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/activity_allrequests.xml" value="0.259375" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/activity_create_room.xml" value="0.259375" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/activity_home.xml" value="0.264" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/activity_login.xml" value="0.12760416666666666" />
@@ -29,6 +30,7 @@
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/fragment_first.xml" value="0.1265625" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/fragment_second.xml" value="0.1265625" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/list_mods.xml" value="0.259375" />
+        <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/list_request.xml" value="0.259375" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/layout/list_room.xml" value="0.259375" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/menu/navigation_bar.xml" value="0.275" />
         <entry key="..\:/Users/Hp/AndroidStudioProjects/SDPproject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.17" />

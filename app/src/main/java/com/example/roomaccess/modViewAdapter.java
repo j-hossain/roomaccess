@@ -19,7 +19,7 @@ public class modViewAdapter extends ArrayAdapter<model_user> {
     Context context;
 
     public modViewAdapter(@NonNull Context context, ArrayList<model_user> mods) {
-        super(context, R.layout.list_room, mods);
+        super(context, R.layout.list_mods, mods);
         this.context = context;
         modsList = mods;
     }

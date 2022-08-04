@@ -6,43 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".MyRooms">
 
-    <RelativeLayout
-        android:id="@+id/rv_searchBox"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/teal_100"
-        >
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rv_searchBox"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:background="@color/teal_100"-->
+<!--        >-->
 
-        <EditText
-            android:id="@+id/ed_search_room"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:ems="10"
-            android:hint="Search rooms"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/teal_700"
-            android:textColorHint="@color/black"></EditText>
+<!--        <EditText-->
+<!--            android:id="@+id/ed_search_room"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:ems="10"-->
+<!--            android:hint="Search rooms"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textColorHighlight="@color/teal_700"-->
+<!--            android:textColorHint="@color/black"></EditText>-->
 
-        <ImageView
-            android:id="@+id/btn_search_room"
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="7sp"
-            android:layout_toRightOf="@+id/ed_search_room"
-            android:src="@drawable/ic_baseline_search_24"
-            android:visibility="visible"
-            tools:visibility="visible"></ImageView>
-    </RelativeLayout>
+<!--        <ImageView-->
+<!--            android:id="@+id/btn_search_room"-->
+<!--            android:layout_width="40sp"-->
+<!--            android:layout_height="40sp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginLeft="7sp"-->
+<!--            android:layout_toRightOf="@+id/ed_search_room"-->
+<!--            android:src="@drawable/ic_baseline_search_24"-->
+<!--            android:visibility="visible"-->
+<!--            tools:visibility="visible"></ImageView>-->
+<!--    </RelativeLayout>-->
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lv_rooms"
-        android:layout_below="@+id/rv_searchBox"
         android:dividerHeight="10dp"
         android:divider="@color/white"
         android:padding="10dp"
+        android:layout_marginTop="30dp"
         >
 
     </ListView>

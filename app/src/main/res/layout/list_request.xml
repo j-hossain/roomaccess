@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
     android:background="@drawable/list_background"
     android:layout_margin="10dp"
     android:padding="20dp"
     >
 
     <TextView
-        android:id="@+id/list_tv_mod_name"
+        android:id="@+id/list_tv_request_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Jahin Hossain"
         android:textColor="@color/black"
         android:textSize="18sp" />
     <TextView
-        android:id="@+id/list_tv_mod_email"
+        android:id="@+id/list_tv_req_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/list_tv_mod_name"
-        android:text="jahin.hsn101@gmail.com"
+        android:layout_below="@+id/list_tv_request_user"
+        android:text="reason for access request is ...."
         />
 
     <Button
-        android:id="@+id/btn_delete_mod"
+        android:id="@+id/btn_details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:backgroundTint="@color/teal_200"
-        android:text="Delete"
+        android:text="Details"
         android:textAllCaps="false"
         android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/list_tv_room_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom = "true"
+        android:text="TextView" />
 </RelativeLayout>

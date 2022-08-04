@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
         btn_qrscan = (Button) findViewById(R.id.btn_qrscan);
         btn_logout = (Button) findViewById(R.id.btn_logout);
         btn_my_rooms = (Button) findViewById(R.id.btn_my_rooms);
-        btn_requests = findViewById(R.id.btn_access_requests);
+        btn_requests = findViewById(R.id.btn_access_request);
 
         getUserName();
 
@@ -58,7 +58,7 @@ public class Home extends AppCompatActivity {
         btn_requests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(Home.this,Allrequests.class));
             }
         });
     }
