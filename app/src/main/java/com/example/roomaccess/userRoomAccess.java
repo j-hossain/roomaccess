@@ -37,7 +37,6 @@ public class userRoomAccess extends AppCompatActivity {
         FirebaseUser user = fr_auth.getCurrentUser();
         userID = user.getUid().toString();
         roomID = getIntent().getExtras().getString("roomID");
-        TextView tv_access = findViewById(R.id.tv_access_status);
         db_ref.child("Access").child(roomID).child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -88,6 +87,14 @@ public class userRoomAccess extends AppCompatActivity {
                 startActivity(new Intent(userRoomAccess.this,Home.class));
             }
         });
+        Button btn_req = findViewById(R.id.btn_request_access);
+        btn_req.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView message = findViewById(R.id.ed_request_message);
+                sendRequest(message.getText().toString());
+            }
+        });
     }
 
     public void checkRoom(){
@@ -113,6 +120,20 @@ public class userRoomAccess extends AppCompatActivity {
 
     public void accessRejected(String Reason){
         Toast.makeText(getApplicationContext(),Reason,Toast.LENGTH_LONG).show();
+        TextView tv_room_name = findViewById(R.id.tv_room_name);
+        db_ref.child("Rooms").child(roomID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    tv_room_name.setText("Request an Access for "+snapshot.child("room_name").getValue().toString());
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     public void accessGranted(){
@@ -137,5 +158,17 @@ public class userRoomAccess extends AppCompatActivity {
         Date stringDate = simpledateformat.parse(aDate, pos);
         return stringDate;
 
+    }
+
+    public void sendRequest(String message){
+        db_ref.child("Requests").child(roomID).child(userID).child("message").setValue(message).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Access request is sent... wait for confirmation...",Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(userRoomAccess.this,Home.class));
+                }
+            }
+        });
     }
 }

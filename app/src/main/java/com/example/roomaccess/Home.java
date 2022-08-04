@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class Home extends AppCompatActivity {
-    Button btn_qrscan, btn_logout, btn_my_rooms;
+    Button btn_qrscan, btn_logout, btn_my_rooms, btn_requests;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ public class Home extends AppCompatActivity {
         btn_qrscan = (Button) findViewById(R.id.btn_qrscan);
         btn_logout = (Button) findViewById(R.id.btn_logout);
         btn_my_rooms = (Button) findViewById(R.id.btn_my_rooms);
-
+        btn_requests = findViewById(R.id.btn_access_requests);
 
         getUserName();
 
@@ -52,6 +52,13 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(Home.this,MyRooms.class);
                 startActivity(i);
+            }
+        });
+
+        btn_requests.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
