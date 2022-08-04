@@ -58,17 +58,6 @@ public class act_qrscanner extends AppCompatActivity implements ZXingScannerView
         Intent userAccess = new Intent(getApplicationContext(), userRoomAccess.class);
         userAccess.putExtra("roomID",roomID);
         startActivity(userAccess);
-//        db_ref.child("Rooms").child(roomID).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-//            @Override
-//            public void onComplete(@NonNull Task<DataSnapshot> task) {
-//                if (!task.isSuccessful()) {
-//                    Log.e("firebase", "Error getting data", task.getException());
-//                }
-//                else {
-//
-//                }
-//            }
-//        });
     }
 
     @Override
