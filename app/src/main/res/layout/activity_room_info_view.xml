@@ -14,6 +14,28 @@
       android:layout_centerHorizontal="true"
       android:layout_centerVertical="true"
       >
+    <RelativeLayout
+        android:id="@+id/qr_code_pan"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+      <ImageView
+          android:id="@+id/qr_code"
+          android:layout_width="150dp"
+          android:layout_height="150dp"
+          android:layout_alignParentTop="true"
+
+            ></ImageView>
+      <Button
+          android:id="@+id/btn_qr_save"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Save"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          />
+
+    </RelativeLayout>
     <TextView
         android:id="@+id/tv_room_name"
         android:layout_width="wrap_content"
@@ -23,7 +45,7 @@
         android:layout_centerHorizontal="true"
         android:textAlignment="center"
         tools:layout_editor_absoluteX="173dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/qr_code_pan"
         tools:layout_editor_absoluteY="64dp" />
 
     <TextView

@@ -62,6 +62,7 @@ public class MyRooms extends AppCompatActivity {
                                         model_room the_room = snapshot.getValue(model_room.class);
                                         the_room.setRoomID(access_rooms.getKey().toString());
                                         the_access.setRoom(the_room);
+//                                        Toast.makeText(getApplicationContext(),the_access.getRoom().roomID,Toast.LENGTH_LONG).show();
                                         rooms.add(new model_my_room(the_room,the_access));
                                         adapter.notifyDataSetChanged();
                                     }

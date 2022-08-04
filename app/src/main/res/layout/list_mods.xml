@@ -10,24 +10,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/list_tv_mod_name"
-        android:text="Room Name"
+        android:text="Jahin Hossain"
         android:textSize="24sp"
         android:textColor="@color/black"
         />
     <TextView
+        android:id="@+id/list_tv_mod_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Access Type: "
         android:layout_below="@+id/list_tv_mod_name"
-        android:id="@+id/list_tv_access_type_label"
+        android:text="jahin.hsn101@gmail.com"
         />
-    <TextView
-        android:id="@+id/list_tv_access_type"
+    <Button
+        android:id="@+id/btn_delete_mod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Teacher"
-        android:layout_toRightOf="@+id/list_tv_access_type_label"
-        android:layout_below="@+id/list_tv_mod_name"
+        android:layout_alignParentRight="true"
+        android:text="Delete"
+        android:textAllCaps="false"
         />
-
 </RelativeLayout>
